@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cafe</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/bootswatch.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Cafe.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Neucha&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header >
+      
+
+        <nav class="navbar navbar-expand-lg bg-dark mb-5 fixed-top" @* style="margin-bottom:200px;" *@ data-bs-theme="dark">
+            <div class="container-fluid">
+                <h3 class="text-warning " style="margin:0px 10px; font-family: 'Annie Use Your Telescope', cursive; font-size:60px">Sawalha Cafe</h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                      
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Cafeproduct" asp-action="Index">Cafe product</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Sandwitch" asp-action="Index">Sandwitch</a>
+                        </li>
+
+
+                       
+
+
+                       
+
+
+                      
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">And More</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-light" asp-controller="IceCream" asp-action="Index">IceCream</a>
+                                <a class="dropdown-item text-light" asp-controller="chocolate" asp-action="Index">chocolate</a>
+                             
+                            </div>
+                        </li>
+                    </ul>
+                  @*   <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form> *@
+                    
+                    <partial name="_LoginPartial" class="text-primary" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @* footer *@
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find me</h4>
+                                <span>Jordan-Irbid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call me</h4>
+                                <span>00962786204015</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail me</h4>
+                                <span>swalha801118@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="https://as1.ftcdn.net/v2/jpg/04/32/20/20/1000_F_432202047_KlpmBdpbETogEko5vjF0yPJHpVKxjTmt.jpg" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                    elit,Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow me</span>
+                                <a href="https://www.facebook.com/hamodeh5555?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                                <a href="https://github.com/mohammad80111"><i class="fab fa-git"></i></a>
+                              
+                                <a href="https://www.linkedin.com/in/mohammad-sawalha-313580323/"><i class=" fab fa-linkedin-in"></i></a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+
+    <style>
+        
+
+        .footer-section {
+            background: #151414 !important;
+            position: relative;
+        }
+
+        .footer-cta {
+            border-bottom: 1px solid #373636;
+        }
+
+        .single-cta i {
+            color: #ff5e14;
+            font-size: 30px;
+            float: left;
+            margin-top: 8px;
+        }
+
+        .cta-text {
+            padding-left: 15px;
+            display: inline-block;
+        }
+
+            .cta-text h4 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+
+            .cta-text span {
+                color: #757575;
+                font-size: 15px;
+            }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-pattern img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 330px;
+            background-size: cover;
+            background-position: 100% 100%;
+        }
+
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+
+            .footer-logo img {
+                max-width: 200px;
+            }
+
+        .footer-text p {
+            margin-bottom: 14px;
+            font-size: 14px;
+            color: #7e7e7e;
+            line-height: 28px;
+        }
+
+        .footer-social-icon span {
+            color: #fff;
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .footer-social-icon a {
+            color: #fff;
+            font-size: 16px;
+            margin-right: 15px;
+        }
+
+        .footer-social-icon i {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 38px;
+            border-radius: 50%;
+        }
+
+        .facebook-bg {
+            background: #3B5998;
+        }
+
+        .twitter-bg {
+            background: #55ACEE;
+        }
+
+        .google-bg {
+            background: #DD4B39;
+        }
+
+        .footer-widget-heading h3 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+            .footer-widget-heading h3::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                height: 2px;
+                width: 50px;
+                background: #ff5e14;
+            }
+
+        .footer-widget ul li {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            margin-bottom: 12px;
+        }
+
+            .footer-widget ul li a:hover {
+                color: #ff5e14;
+            }
+
+            .footer-widget ul li a {
+                color: #878787;
+                text-transform: capitalize;
+            }
+
+        .subscribe-form {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .subscribe-form input {
+                width: 100%;
+                padding: 14px 28px;
+                background: #2E2E2E;
+                border: 1px solid #2E2E2E;
+                color: #fff;
+            }
+
+            .subscribe-form button {
+                position: absolute;
+                right: 0;
+                background: #ff5e14;
+                padding: 13px 20px;
+                border: 1px solid #ff5e14;
+                top: 0;
+            }
+
+                .subscribe-form button i {
+                    color: #fff;
+                    font-size: 22px;
+                    transform: rotate(-6deg);
+                }
+
+        .copyright-area {
+            background: #202020;
+            padding: 25px 0;
+        }
+
+        .copyright-text p {
+            margin: 0;
+            font-size: 14px;
+            color: #878787;
+        }
+
+            .copyright-text p a {
+                color: #ff5e14;
+            }
+
+        .footer-menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+            .footer-menu li:hover a {
+                color: #ff5e14;
+            }
+
+            .footer-menu li a {
+                font-size: 14px;
+                color: #878787;
+            }
+    </style>
+    @* footer *@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

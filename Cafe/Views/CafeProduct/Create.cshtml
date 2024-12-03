@@ -1,0 +1,55 @@
+﻿@model CafeProduct
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+
+<form method="post" style="margin-top:150px;">
+   
+    <div class="border p-3 mt-4" >
+        <div class="row pb-3">
+            <h1 class="text-primary">add new Item</h1>
+            <hr />
+        </div>
+
+        <div asp-validation-summary="All"></div> @* عشان يطلع رساله غلط *@
+        <div class="mb-3">
+            <label asp-for="Name" >Name</label>
+            <input class="form-control" asp-for="Name"/>
+            <span asp-validation-for="Name" class="text-danger"></span>@* عشان يطلع رساله غلط *@
+ 
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description">Description</label>
+            <input class="form-control" asp-for="Description" />
+            <span asp-validation-for="Description" class="text-danger"></span>@* عشان يطلع رساله غلط *@
+        </div>
+
+
+    
+
+        <div class="mb-3">
+            <select class="form-control" asp-for="SizeId" asp-items="@ViewBag.selecto"></select>
+        </div>
+
+       
+
+        <button type="submit" class="btn btn-primary" style="width:150px">save</button>
+
+        <a class="btn btn-warning" style="width:150px" asp-action="Index" asp-controller="CafeProduct">Back</a>
+    </div>
+</form>
+
+
+
+    @*  هيك التحقق من جهه العميل ما بعمل خمل ع database server *@
+        @section Scripts{
+    <partial name="_ValidationScriptsPartial.cshtml"></partial>
+        }
+
+
+
+
